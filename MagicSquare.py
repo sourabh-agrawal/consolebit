@@ -10,9 +10,10 @@ Instructions:-
 	sum is also get prints along with the matrix on the screen
 '''
 
-#!/usr/bin/python3
-matrix = []  			# matrix is global matrix where the grid will get stored
-no = 1  				# no is used to get the max no that stored in grid
+# !/usr/bin/python3
+matrix = []  # matrix is global matrix where the grid will get stored
+no = 1  # no is used to get the max no that stored in grid
+
 
 # This method will initialize the grid of size 'size' by 0
 def initialize(size):
@@ -56,6 +57,7 @@ Algorithm being used in grid method is:
 				and then change the value of k, l accordingly
 '''
 
+
 def grid(size):
     global no
     no = 1
@@ -84,10 +86,17 @@ def grid(size):
 # This method is used to calculate the sum of magic square
 def calsum(size):
     global matrix
-    sum = 0
+    sum_rowwise = 0
+    sum_colwise = 0
+    sum_diagwise = 0
     for i in range(size):
-        sum += matrix[0][i]
-    print("\nAs you can see the sum is %d" % sum)
+        sum_colwise += matrix[i][0]         #calculating sum of elements of first column
+        sum_rowwise += matrix[0][i]         #calculating sum of elements of first row
+        sum_diagwise += matrix[i][i]        #calculating sum of diagonal
+    # print("\nAs you can see the sum is %d" % sum)
+    print("rowwise sum %d" % sum_rowwise)
+    print("colwise sum %d" % sum_colwise)
+    print("diagwise sum %d" % sum_diagwise)
 
 
 def main():
@@ -110,4 +119,3 @@ def main():
 
 
 if __name__ == '__main__': main()
-

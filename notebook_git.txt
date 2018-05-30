@@ -1,0 +1,109 @@
+#git commands
+
+To start git in any folder use "git init"
+Configure your username in cd .git and then nano config file and then in url give username:password@git......
+
+Git status						#To view the status of uncommitted files
+
+nano .gitignore
+
+write file name which u want to ignore in .gitignore file to include complete folders and their files use foldername/*
+
+git add filename				#step1 is to add file in a container
+
+git commit -m "commit message"	#step2 is to lock the container and add some label on it
+
+git push origin master			#step3 is to push the committed container to the server
+								#but here error will come since git doesn't know the repo yet
+
+git remote add origin https://github.com/sourabh-agrawal/sample.git			#add repo to the project
+
+git push origin master			#now it will work
+
+git branch						#shows the branches
+
+git checkout -b "new_branch_name"											#creating a new branch
+
+git branch						#view the branches
+
+git status
+
+nano firstday.ipynb				#making some small change in any available file
+
+git diff firstday.ipynb			#to know what piece of code you changed
+
+git checkout firstday.ipynb		#to roll back to the previous saved version
+
+git add firstday.ipynb
+
+git commit -m "updated message"
+
+git commit --amend				#To change the commit message
+
+git push origin "new branch name"
+
+git branch
+
+git checkout master				#to switch to master branch
+
+git checkout -b "another branch"
+
+nano firstday.ipynb
+
+git add firstday.ipynb
+
+git commit -m "another message"
+
+git push origin another
+
+git checkout master
+
+git merge new-master			#for mergin new-master with master
+
+git push origin master
+
+git merge another				#now here conflict will occur because both branches modified same file and trying to merge with master so master doesn't know whose 								code to keep
+
+nano firstday.ipynb				#now in this file both version of code are available of both branches so remove which you don't wanna keep
+
+git add firstday.ipynb
+
+git commit -m "conflict solved"
+
+git push origin master
+
+git log							#to view the commit log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,6 @@ problem:
 	user have some amount and user will give the type of notes in which he wants to get his currency gets converted. we have to give user minimum no of notes
 	so, convert the amount given by the user effeciently so that all amount gets covered by lesser no of notes...
 '''
-
 #!/usr/bin/python3
 def main():
     no = int(input("Enter how many type of notes you have with you?\t"))		#suppose no = 7
